@@ -1,0 +1,264 @@
+*{margin:0;padding:0;font-family: sans-serif;}
+a{text-decoration: none;}
+ul{list-style: none;}
+:root{
+  --main-color:#E54500;
+}#sibote {position:relative;margin-right: 10px;}
+#sibote:before{  content: "\00ae";font-size: 0.8em;position: absolute;top:0;
+right:-0.8em;
+}
+/*base style*/
+
+/*header*/
+body{overflow-x: hidden;height: 4900px;}
+#header{
+        background-image:url('leg.jpg');
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: bottom  right  ;
+        -moz-background-size: cover;
+        min-height: 300px;
+        overflow: hidden;
+}
+#header nav{
+        background-color: white;
+        min-height: 2.5em;
+        overflow: hidden;
+          text-align: center;
+}
+#header nav ul{
+        display: inline-block;
+        margin-top: 0.5em;
+        color:green;
+        position:relative;
+        width:30%;
+        font-size: 1.6rem;
+}
+#header nav ul li{
+        font-weight: 700;
+}
+#header nav ul li:after{
+        content:'\00ae';
+        position: absolute;
+        top:0;
+        right:-10%;
+        font-size: 0.9rem;
+}
+#header nav ul li:before{
+        content: "";
+        background-image: url('icon1.jpg');
+        background-size:cover;
+        width:30px;
+        height:30px;
+        position: absolute;
+        left:-50%;
+        top:0;
+        transform: translate(50%,-10%);
+}
+#header .headerarticle {
+      position: relative;
+}
+#header .headerarticle article{
+        position: absolute;
+        left:50%;
+        top:50%;
+        transform: translate(-50%,50%);
+        text-align: center;
+}
+#header .headerarticle article *{
+      color:white;
+  }
+#header .headerarticle article h1{
+        font-size:1.5rem;
+        text-shadow:2px 2px 1px black;
+}
+#header .headerarticle article a{
+        background:var(--main-color);
+
+        margin-top: 10px;
+        width:115px;
+        height: 30px;
+        display: inline-block;
+        box-sizing: border-box;
+        border-radius: 5px;
+}
+#header .headerarticle article span{
+        font-size: 1.3em;
+        position: relative;
+        left:-10%;
+}
+#header .headerarticle article span:after{
+        content: "";
+        background-image: url('images.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        right:-25%;
+        bottom: -20%;
+        width: 30px;
+        height:30px;
+}
+/*Fin header*/
+/*siil*/
+.content{
+      width:90%;
+      margin:auto;
+}
+#sell .content div h1{
+    font-size: 2em;
+    font-weight: 400;
+    margin: 10px 0px;
+  display: block;
+}
+#sell .content div h1 span:before{
+      content: '\00ae';
+      font-size: 19px;
+      position: relative;
+      bottom:12px;
+}
+#sell .content div button{
+    background:#CC160B;
+    border:0;
+    border-radius: 5px;
+    color:white;
+    font-size: 2em;
+    height:50px;
+    width:220px;
+    font-weight: 400;
+}
+#sell .content div h2{
+  font-weight: 700;
+  color: #CC160B;
+  font-size:3em;
+}
+#sell .content div h2 span{
+  font-weight: 400;
+  font-size: 26px !important;
+  color:black;
+  text-decoration: line-through;
+}
+#sell .content div h3{
+    font-size:1.5em;
+    font-weight: 400;
+    color:#CC160B;
+}
+#sell .content .formula{
+  margin-top: 20px;
+}
+#sell .content .formula form{
+  display: flex;
+  flex-direction: column;
+}
+#sell .content .formula form .items{
+    height: 80px;
+}
+#sell .content .formula form .items label{
+    font-size:1em;
+    font-weight: 400;
+    border: 0;
+}
+#sell .content .formula form .items input{
+    display: block;
+    height: 50px;
+    width:100%;
+    padding:10px 10px;
+    box-sizing: border-box;
+}
+#sell .content .formula form .items input:focus{
+    border: 0.2px solid blue;
+}
+
+#sell .content .formula form  input[id="input"]{
+    background:#CC160B;
+    color:white;
+    border: 0;
+    height: 100px;
+    width:150px;
+    font-size: 2em;
+    border-radius: 20px;
+}
+/*fin still*/
+/*info lisder*/
+#fileinfo .delevryicon {
+  width:60%;
+  margin: auto;
+  text-align: center;
+}
+#fileinfo .delevryicon img{
+width:60%;
+}
+#fileinfo .slidermove{
+  text-align: center;
+  width:300px;
+  margin: auto;
+  display: block;
+overflow: hidden;
+}
+#fileinfo .slidermenu{
+  display: flex;
+  flex-direction: row;
+  width:1200px;
+justify-content: space-between;
+
+}
+#fileinfo .slidermenu .itemslider{
+
+
+}
+#fileinfo .slidermenu .itemslider img{
+    width:300px;
+}
+/*FIN info lisder*/
+/*more info---- info about product */
+.infodelevry{
+    margin-top:20px;
+}
+
+.infodelevry table tr:first-child  {
+  width:100%;
+  height:80px;
+  background:orange;
+}
+.infodelevry table tr th{
+  width:calc(100%/3);
+}
+.infodelevry table tr td{
+  text-align: center;
+  font-weight: 900;
+  font-size: 0.8em;
+}
+      /*productinfo----**/
+.productinfo section{
+            margin-top: 50px;
+}
+.productinfo section h3{font-size: 2.1em;
+                font-weight: 400;}
+.productinfo section img{
+  margin: 10px 0;
+                width:100%;
+}
+.productinfo section p{
+                font-size:1.5em;
+                font-weight: 100;
+}
+.productinfo section p > span{
+                text-decoration: underline;
+}
+.productinfo .button {
+            text-align: center;
+            margin-top: 16px;
+}
+.productinfo .button a{
+            margin: auto;
+            padding:15px 10px;
+            width:80%;
+            height:70px;
+            display: block;
+            background:var(--main-color);
+            color:white;
+            font-size:1.6em;
+            box-sizing: border-box;
+            border-radius: 12px;
+
+
+}
