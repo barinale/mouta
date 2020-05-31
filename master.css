@@ -1,6 +1,7 @@
 *{margin:0;padding:0;font-family: sans-serif;}
 a{text-decoration: none;}
 ul{list-style: none;}
+
 :root{
   --main-color:#E54500;
 }#sibote {position:relative;margin-right: 10px;}
@@ -10,7 +11,7 @@ right:-0.8em;
 /*base style*/
 
 /*header*/
-body{overflow-x: hidden;height: 5900px;}
+body{overflow-x: hidden;height: 6900px;}
 #header{
         background-image:url('leg.jpg');
         background-size:cover;
@@ -22,9 +23,13 @@ body{overflow-x: hidden;height: 5900px;}
 }
 #header nav{
         background-color: white;
-        min-height: 2.5em;
+        min-height: 3.5em;
         overflow: hidden;
           text-align: center;
+          position: fixed;
+          width:100%;
+          z-index: 10;
+
 }
 #header nav ul{
         display: inline-block;
@@ -56,6 +61,7 @@ body{overflow-x: hidden;height: 5900px;}
         transform: translate(50%,-10%);
 }
 #header .headerarticle {
+  margin-top: 60px;
       position: relative;
 }
 #header .headerarticle article{
@@ -290,18 +296,99 @@ margin-top:15px;
         font-size:1.6em;
         overflow: hidden;
 }
-.granti section{
+.granti section {
       margin-top: 19px;
+      margin-top: 160px;
       border: 1px solid black;
       padding: 20px 10px;
+      background:#FFFCDA;
+      position:relative;
+
 }
-.granti section h2{
+.granti section *{
+      margin: 10px 0px;
+}
+.granti .first h2{
       color:red;
       font-weight: 400;
-      margin: 10px 0;
+
 }
 .granti section hr{
       width:50%;
       font-weight: 100;
+      display: block;
+      margin-right:calc(50%/2);
+
+}
+.granti .first h4{
+    font-size: 1.3em;
+    font-weight: 300;
+}
+.granti .first h5{
+    font-size:1.3em;
+    font-weight: 200;
+}
+
+.granti .first .circle {
+    height:120px;
+    width:120px;
+    border-radius: 50%;
+    background:yellow;
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+}
+/*secound --------*/
+.granti .secound h2{
+    font-weight: 400;
+    font-size:2.4em;
+}
+.granti .secound h3{
+    color:red;
+    font-size: 2.1em;
+    font-weight: 400;
+    transform: scaleY(1.1);
+}
+.granti .secound img{
+    width:100%;
+}
+.granti .secound h4{
+      font-size: 1.2em;
+      font-weight:300;
+      line-height: 40px;
+}
+.granti .secound h4 span{
+    text-decoration: underline;
+}
+.granti .secound a{
+      position: absolute;
+      left:50%;
+      transform: translateX(-50%);
+      bottom:-60px;
+}
+#link{
+  position:relative;
+  display: block;
+  height:50px;
+  width:150px;
+  background:#E54500;
+  text-align: center;
+  color:white;
+  padding:10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 1.2em;
+
+}
+#link:after {
+  content: "";
+  background-image: url('images.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  right:5%;
+  bottom: 20%;
+  width: 30px;
+  height:30px;
 }
 /*Fin produt garanti*/
