@@ -4,10 +4,12 @@ ul{list-style: none;}
 
 :root{
   --main-color:#E54500;
-}#sibote {position:relative;margin-right: 10px;}
+}
+#sibote {position:relative;margin-right: 10px;}
 #sibote:before{  content: "\00ae";font-size: 0.8em;position: absolute;top:0;
 right:-0.8em;
 }
+input[type="radio"]{display: none;}
 /*base style*/
 
 /*header*/
@@ -32,8 +34,9 @@ body{overflow-x: hidden;}
 
 }
 #header nav ul{
+        padding-top: 10px;
         display: inline-block;
-        margin-top: 0.5em;
+
         color:green;
         position:relative;
         width:30%;
@@ -49,24 +52,23 @@ body{overflow-x: hidden;}
 #header nav ul li:after{
         content:'\00ae';
         position: absolute;
-        top:-10px;
-        right:-10px;
+        top:-5px;
+        right:-20px;
         font-size: 1.3rem;
 }
 #header nav ul li:before{
         content: "";
         background-image: url('icon1.jpg');
-
         background-size:cover;
         width:35px;
         height:35px;
         position: absolute;
-        right:120px;
+        right:7.4rem;
         top:0px;
         transform: translate(50%,-10%);
 }
 #header .headerarticle {
-  margin-top: 60px;
+  margin-top: calc(100vw/4);
       position: relative;
 }
 #header .headerarticle article{
@@ -85,10 +87,8 @@ body{overflow-x: hidden;}
 }
 #header .headerarticle article a{
         background:var(--main-color);
-
         margin-top: 10px;
-        width:115px;
-        height: 30px;
+        height: 40px;
         display: inline-block;
         box-sizing: border-box;
         border-radius: 5px;
@@ -97,6 +97,10 @@ body{overflow-x: hidden;}
         font-size: 1.3em;
         position: relative;
         left:-10%;
+        display: block;
+        width:150px;
+        padding-top:7px;
+
 }
 #header .headerarticle article span:after{
         content: "";
@@ -104,7 +108,7 @@ body{overflow-x: hidden;}
         background-repeat: no-repeat;
         background-size: cover;
         position: absolute;
-        right:-25%;
+        right:-5%;
         bottom: -20%;
         width: 30px;
         height:30px;
@@ -171,7 +175,7 @@ body{overflow-x: hidden;}
 #sell .content .formula form .items input{
     display: block;
     height: 50px;
-    width:100%;
+    width:90%;
     padding:10px 10px;
     box-sizing: border-box;
 }
@@ -179,14 +183,16 @@ body{overflow-x: hidden;}
     border: 0.2px solid blue;
 }
 
-#sell .content .formula form  input[id="input"]{
+#sell .content .formula  input[id="input"]{
     background:#CC160B;
     color:white;
     border: 0;
     height: 100px;
-    width:150px;
+    width:180px;
     font-size: 2em;
     border-radius: 20px;
+    margin: auto;
+    display: block;
 }
 /*fin still*/
 /*info lisder*/
@@ -203,15 +209,10 @@ width:60%;
   width:300px;
   margin: auto;
   display: block;
-overflow: hidden;
-}
-#fileinfo .slidermenu{
-  display: flex;
-  flex-direction: row;
-  width:1200px;
-justify-content: space-between;
+  overflow: hidden;
 
 }
+
 #fileinfo .slidermenu .itemslider{
 
 
@@ -219,6 +220,30 @@ justify-content: space-between;
 #fileinfo .slidermenu .itemslider img{
     width:300px;
 }
+/*work to slider movment******************************************************/
+
+#fileinfo .slidermenu{
+  display: flex;
+  flex-direction: row;
+  width:1200px;
+justify-content: space-between;
+position: relative;
+}
+#fileinfo input[id="menubar3"]:checked ~ .slidermenu{right:0;transition: all 1s;}
+#fileinfo input[id="menubar3"]:checked ~ .BUTTONMOVE label[for="menubar3"]{background:#211818;}
+#fileinfo input[id="menubar2"]:checked ~ .slidermenu{right:-450px;transition: all 1s;}
+#fileinfo input[id="menubar2"]:checked ~ .BUTTONMOVE label[for="menubar2"]{background:#211818;}
+#fileinfo input[id="menubar1"]:checked ~ .slidermenu{right:-900px;transition: all 1s;}
+#fileinfo input[id="menubar1"]:checked ~ .BUTTONMOVE label[for="menubar1"]{background:#211818;}
+
+.BUTTONMOVE label{
+  height:20px;width:20px;background:#634d4d;border-radius: 50%;
+  display:inline-block;
+
+}
+
+/*work to slider movment******************************************************/
+
 /*FIN info lisder*/
 /*more info---- info about product */
 .infodelevry{
@@ -447,4 +472,32 @@ footer h2{
   font-size:1.4em;
     color:white;
     font-weight: 300;
+}
+@media (min-width:680px) {
+#header{min-height:500px;}
+html{font-size:17px;}
+.content{width:80%;}
+#sell .content .formula form{
+
+  flex-direction: row;
+}
+}
+
+@media (min-width:980px) {
+  html{font-size: 18px;}
+#header{min-height:600px;}
+.content{width:70%;}
+#sell .content .formula  input[id="input"]{
+align-self:center;
+}
+}
+
+@media (min-width:1280px) {
+  html{font-size: 19px;}
+#header{min-height:700px;}
+.content{width:60%;}
+#sell .content .formula form{
+
+}
+
 }
