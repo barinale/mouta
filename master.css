@@ -13,7 +13,8 @@ input[type="radio"]{display: none;}
 /*base style*/
 
 /*header*/
-body{overflow-x: hidden;}
+body{overflow-x: hidden;background-image: url('background.jpg');}
+
 #header{
         background-image:url('leg.jpg');
         background-size:cover;
@@ -116,22 +117,27 @@ body{overflow-x: hidden;}
 /*Fin header*/
 /*siil*/
 .content{
-      width:90%;
-      margin:auto;
+      width:100%;
+      margin:-10px auto;
+      background:white;
+      box-shadow: 0px 10px 24px 1px  black;
+      padding: 0 5%;
+      box-sizing: border-box;
+
 }
-#sell .content div h1{
+#sell  div h1{
     font-size: 2em;
     font-weight: 400;
     margin: 10px 0px;
   display: block;
 }
-#sell .content div h1 span:before{
+#sell div h1 span:before{
       content: '\00ae';
       font-size: 19px;
       position: relative;
       bottom:12px;
 }
-#sell .content div button{
+#sell div button{
     background:#CC160B;
     border:0;
     border-radius: 5px;
@@ -141,49 +147,55 @@ body{overflow-x: hidden;}
     width:220px;
     font-weight: 400;
 }
-#sell .content div h2{
+#sell div h2{
   font-weight: 700;
   color: #CC160B;
   font-size:3em;
 }
-#sell .content div h2 span{
+#sell div h2 span{
   font-weight: 400;
   font-size: 26px !important;
   color:black;
   text-decoration: line-through;
 }
-#sell .content div h3{
+#sell div h3{
     font-size:1.5em;
     font-weight: 400;
     color:#CC160B;
 }
-#sell .content .formula{
+#sell .formula{
   margin-top: 20px;
+  padding-bottom:30px;
+
 }
-#sell .content .formula form{
+#sell .formula form{
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
-#sell .content .formula form .items{
+#sell .formula form .items{
     height: 80px;
+      flex: 1 0 30%;
 }
-#sell .content .formula form .items label{
+#sell .formula form .items label{
     font-size:1em;
     font-weight: 400;
     border: 0;
 }
-#sell .content .formula form .items input{
+#sell .formula form .items input{
     display: block;
     height: 50px;
     width:90%;
     padding:10px 10px;
     box-sizing: border-box;
 }
-#sell .content .formula form .items input:focus{
+#sell .formula form .items input:focus{
     border: 0.2px solid blue;
 }
-
-#sell .content .formula  input[id="input"]{
+#sell .formula  .item .inputb{
+  display: inline-flex;
+  flex: 0 1 100%;}
+#sell .formula  .item input[id="input"]{
     background:#CC160B;
     color:white;
     border: 0;
@@ -192,7 +204,7 @@ body{overflow-x: hidden;}
     font-size: 2em;
     border-radius: 20px;
     margin: auto;
-    display: block;
+
 }
 /*fin still*/
 /*info lisder*/
@@ -327,8 +339,9 @@ margin-top:15px;
         overflow: hidden;
 }
 .granti section:not(.therdd) {
-      margin-top: 19px;
-      margin-bottom: 160px;
+
+width: 80%;
+  margin: 120px auto ;
       border: 1px solid black;
       padding: 20px 10px;
       background:#FFFCDA;
@@ -422,6 +435,11 @@ margin-top:15px;
   width: 30px;
   height:30px;
 }
+.granti .therd h1{
+  font-weight: 400;
+  font-size: 2em;
+
+}
 .granti .therd .therdd{
   margin-top: 19px;
   margin-bottom: 20px;
@@ -431,7 +449,7 @@ margin-top:15px;
   position:relative;
 }
 .granti .therd img{
-  width:80%;
+  width:70%;
 }
 .granti .therd .therdd{
       font-size:1.2em;
@@ -477,7 +495,7 @@ footer h2{
 #header{min-height:500px;}
 html{font-size:17px;}
 .content{width:80%;}
-#sell .content .formula form{
+#sell  .formula form{
 
   flex-direction: row;
 }
@@ -487,7 +505,7 @@ html{font-size:17px;}
   html{font-size: 18px;}
 #header{min-height:600px;}
 .content{width:70%;}
-#sell .content .formula  input[id="input"]{
+#sell  .formula  input[id="input"]{
 align-self:center;
 }
 }
