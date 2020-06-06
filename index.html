@@ -38,9 +38,10 @@
               </div>
                 <div class="formula" >
                     <div class="item">
-                      <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdPbSh7EsLQvmEER63oPVFmnp-GdhG1Gm27leI0CeOrgR4yTw/formResponse" target="_self" method="POST">
+                      <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdPbSh7EsLQvmEER63oPVFmnp-GdhG1Gm27leI0CeOrgR4yTw/formResponse" target="_self" method="POST"
+                        onsubmit="return check()">
                               <div class="items">
-                                <label for="fname"> الإسم الكامل</label>
+                                <label for="fname" > الإسم الكامل</label>
                                 <input type="text" id="fname" name="entry.777856453" placeholder="الإسم الكامل"/>
                               </div>
                               <div class="items">
@@ -49,7 +50,7 @@
                               </div>
                               <div class="items">
                                 <label for="lphone"> الهاتف </label>
-                                <input type="number" id="lphone" name="entry.226679722" placeholder="الهاتف"/>
+                                <input type="number" id="lphone" name="entry.226679722" placeholder="الهاتف" min="1111111" max="999999999"/>
                               </div>
                               <div class="inputb">
 
@@ -208,6 +209,28 @@
         <footer>
             <h2> جميع الحقوق محفوضة ل <span id="sibote">SIBOTE</span>    </h2>
         </footer>
+<script type="text/javascript">
+/*fname
+lcity
+lphone*/
+      function check(){
+        if(document.getElementById("fname").value =="" ||document.getElementById("fname").value.trim() ==0 ){
+          alert("please your have entre name");
+          document.getElementById("fname").style.borderColor ="red";
+          return false;
+        }else if(document.getElementById("lcity").value =="" ||document.getElementById("lcity").value.trim() ==0 ){
+            alert("please entre your city");
+            document.getElementById("lcity").style.borderColor ="red";
+            return false;
+        }
+        else if (document.getElementById("lphone").value =="" ||document.getElementById("lphone").value.trim() ==0 ||
+                document.getElementById("lphone").value.length<=8  ) {
+                    alert("min number 8");
+                    document.getElementById("lphone").style.borderColor="red";
+                      return false;
+        }
 
+      }
+</script>
   </body>
 </html>
