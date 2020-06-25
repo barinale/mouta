@@ -89,7 +89,7 @@ body{overflow-x: hidden;background-image: url('background.jpg');}
 #header .headerarticle article a{
         background:var(--main-color);
         margin-top: 10px;
-        height: 40px;
+        padding:0.4em .7em;
         display: inline-block;
         box-sizing: border-box;
         border-radius: 5px;
@@ -100,7 +100,7 @@ body{overflow-x: hidden;background-image: url('background.jpg');}
         left:-10%;
         display: block;
         width:150px;
-        padding-top:7px;
+
 
 }
 #header .headerarticle article span:after{
@@ -110,9 +110,8 @@ body{overflow-x: hidden;background-image: url('background.jpg');}
         background-size: cover;
         position: absolute;
         right:-5%;
-        top: 10px;
-        width: 30px;
-        height:30px;
+        top:5px;
+        padding:0.5em .5em;
 }
 /*Fin header*/
 /*siil*/
@@ -265,10 +264,14 @@ position: relative;
 .infodelevry table tr:first-child  {
   width:100%;
   height:80px;
-  background:orange;
+
 }
 .infodelevry table tr th{
   width:calc(100%/3);
+}
+.infodelevry table tr th span i{
+  font-size: 3em;
+  color:var(--main-color);
 }
 .infodelevry table tr td{
   text-align: center;
@@ -315,10 +318,9 @@ position: relative;
 text-align: center;
 margin-top:15px;
 }
-.detailproduct .dInfo img{
-          width: 50px;
-          height:50px;
-          background:green;
+.detailproduct .dInfo i{
+          font-size:2.5em;
+          color:green;
           }
 .detailproduct .dInfo p{
         font-size:1.4em;
@@ -373,13 +375,17 @@ width: 80%;
 }
 
 .granti .first .circle {
-    height:120px;
-    width:120px;
     border-radius: 50%;
-    background:yellow;
     position: absolute;
     left:50%;
     transform: translateX(-50%);
+    bottom:-32%;
+
+}
+.granti .first .circle i{
+  font-size: 4.5em;
+  padding:0.1em 0.5em;
+  color:var(--main-color);
 }
 /*secound --------*/
 .granti .secound h2{
@@ -408,17 +414,17 @@ width: 80%;
       left:50%;
       transform: translateX(-50%);
       bottom:-60px;
+
 }
 
 #link{
   position:relative;
   display: block;
-  height:50px;
-  width:150px;
+
   background:#E54500;
   text-align: center;
   color:white;
-  padding:10px;
+  padding:0.3em 2.2em;
   box-sizing: border-box;
   border-radius: 5px;
   font-size: 1.2em;
@@ -430,10 +436,8 @@ width: 80%;
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  right:5%;
-  bottom: 20%;
-  width: 30px;
-  height:30px;
+  right:8%;
+  padding:0.7em 0.7em;
 }
 .granti .therd h1{
   font-weight: 400;
